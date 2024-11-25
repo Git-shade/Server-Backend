@@ -1,0 +1,23 @@
+---
+project_name: gitshade
+loglevel: info
+analyses:
+- analysis_name: test_backend
+  source_directory: tmp/my_folder/extracted/shivamvijaywargi-AmmaJaan-backend-f852448/src
+  only_permit_languages:
+  - ts
+  only_permit_file_extensions:
+  - .ts
+  ignore_directories_containing:
+  - .git
+  - venv
+  - tests
+  - .vscode
+  - node_modules
+  ignore_files_containing:
+  - __init__.ts
+  file_scan:
+  - number_of_methods
+  export:
+  - directory: ./emerge/export/emerge
+  
